@@ -31,8 +31,8 @@ jobs:
         password: ${{secrets.DOCKERHUB_TOKEN}}
     - name: build and release to DockerHub
       env:
-        name: tjwjdgks43
-        repo: gitactiontest
+        NAME: tjwjdgks43
+        REPO: gitactiontest
       run: |
         docker build -t $REPO .
         docker tag $REPO:latest $NAME/$REPO:latest
